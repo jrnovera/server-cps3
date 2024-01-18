@@ -21,7 +21,7 @@ const mongoose = require('mongoose');
 		},
 		isAdmin: {
 			type: Boolean,
-			default: true
+			default: false
 		},
 		mobileNo: {
 			type: String,
