@@ -9,7 +9,7 @@ const cartRoutes = require ("./routes/cart");
 const orderRoutes = require ("./routes/order");
 
 //Setting up constants
-const port = 4000;
+const port = 4001;
 const cors = require("cors"); // Middleware for handling Cross-Origin Resource Sharing
 const app = express(); // The Express application
 
@@ -34,10 +34,10 @@ mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atl
 app.get("/", (req, res) => {
 	res.send("Hello world")
 })
-app.use("/users", userRoutes);
-app.use("/products", productRoutes);
-app.use("/cart", cartRoutes);
-app.use("/orders", orderRoutes);
+app.use("/b1/users", userRoutes);
+app.use("/b1/products", productRoutes);
+app.use("/b1/cart", cartRoutes);
+app.use("/b1/orders", orderRoutes);
 
 //Start the server
 //Server  starts listening on the speicified port
